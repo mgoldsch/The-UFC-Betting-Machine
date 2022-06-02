@@ -9,4 +9,6 @@ Plan:
   use docker to make the app
   
 TODO:
-  
+ 
+ 
+Scraper code is from: https://github.com/fanghuiz/ufc-stats-crawler
