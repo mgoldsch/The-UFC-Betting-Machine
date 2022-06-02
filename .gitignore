@@ -2,3 +2,5 @@
 .env
 rabbitmq/data
 rabbitmq/logs
+scraper/data
+scraper/log
