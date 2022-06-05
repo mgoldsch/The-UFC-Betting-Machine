@@ -18,3 +18,15 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
+  
+  scraper:
+    build: ./scraper
+    volumes:
+      - scraperLog:/log
+      - scraperData:/data
+  
+volumes:
+  scraperLog:
+    external: false
+  scraperData:
+    external: false
