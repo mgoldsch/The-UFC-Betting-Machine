@@ -25,6 +25,11 @@ services:
       - scraperLog:/log
       - scraperData:/data
   
+  cleaner:
+    build: ./cleaner
+    volumes:
+      - scraperData:/data
+  
 volumes:
   scraperLog:
     external: false
