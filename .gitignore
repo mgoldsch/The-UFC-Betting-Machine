@@ -4,3 +4,4 @@ rabbitmq/data
 rabbitmq/logs
 scraper/data
 scraper/log
+glicko_rating_generation/glicko_rating
