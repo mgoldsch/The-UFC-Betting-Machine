@@ -228,7 +228,7 @@ class FightersSpider(scrapy.Spider):
 
     custom_settings = {
         'FEED_FORMAT': 'csv',
-        'FEED_URI': 'data/fighter_stats/%(time)s.csv'
+        'FEED_URI': '/data/fighter_stats/%(time)s.csv'
     }
 
     def parse(self, response):
@@ -319,7 +319,7 @@ class UpcomingFightsSpider(scrapy.Spider):
 
     custom_settings = {
         'FEED_FORMAT': 'csv', 
-        'FEED_URI': f'data/upcoming/{time_created}.csv'
+        'FEED_URI': f'/data/upcoming/{time_created}.csv'
     }
 
     def parse(self, response):

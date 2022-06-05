@@ -75,7 +75,7 @@ class FightSummaryPipeline(object):
     def open_spider(self, spider):
         time_created = print_time('now')
         # Create directory
-        path_fight_info = f'data/fight_info'
+        path_fight_info = f'/data/fight_info'
         pathlib.Path(path_fight_info).mkdir(parents=True, exist_ok=True)
         # Write to folder
         file = open(f'{path_fight_info}/{time_created}.csv', 'wb')
@@ -104,7 +104,7 @@ class FightStatsPipeline(object):
     def open_spider(self, spider):
         time_created = print_time('now')
         # Create directory
-        path_fight_stats = f'data/fight_stats'
+        path_fight_stats = f'/data/fight_stats'
         pathlib.Path(path_fight_stats).mkdir(parents=True, exist_ok=True)
         # Write to folder
         file = open(f'{path_fight_stats}/{time_created}.jl', 'wb')
