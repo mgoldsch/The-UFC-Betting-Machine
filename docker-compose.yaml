@@ -1,29 +1,29 @@
 services:
-  mysql:
-    image: mysql
-    volumes:
-      - ./mysql/:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+  # mysql:
+  #   image: mysql
+  #   volumes:
+  #     - ./mysql/:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  #     MYSQL_DATABASE: ${MYSQL_DATABASE}
   
-  rabbitmq:
-    image: rabbitmq:3-management
-    hostname: my-rabbit
-    volumes:
-      - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
-      - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
-      - ./rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
-      - ./rabbitmq/logs:/var/log/rabbitmq/log
-    ports:
-      - 5672:5672
-      - 15672:15672
+  # rabbitmq:
+  #   image: rabbitmq:3-management
+  #   hostname: my-rabbit
+  #   volumes:
+  #     - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
+  #     - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+  #     - ./rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
+  #     - ./rabbitmq/logs:/var/log/rabbitmq/log
+  #   ports:
+  #     - 5672:5672
+  #     - 15672:15672
   
-  scraper:
-    build: ./scraper
-    volumes:
-      - scraperLog:/log
-      - scraperData:/data
+  # scraper:
+  #   build: ./scraper
+  #   volumes:
+  #     - scraperLog:/log
+  #     - scraperData:/data
   
   cleaner:
     build: ./cleaner
