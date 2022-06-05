@@ -30,8 +30,16 @@ services:
     volumes:
       - scraperData:/data
   
+  glickoRatingGen:
+    build: ./glicko_rating_generation
+    volumes:
+      - scraperData:/data
+      - glickoRating:/glicko_rating
+  
 volumes:
   scraperLog:
     external: false
   scraperData:
+    external: false
+  glickoRating:
     external: false
