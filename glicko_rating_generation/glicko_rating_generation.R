@@ -40,8 +40,12 @@ for(j in 1:nrow(ufc_data)){
   #rating generation
   gl <- glicko(fight, status = status_df, init = c(1500, 290), cval = 5)
   
+  #glicko_rating for future predictions
+  glicko_rating <- gl
+
   #status for future input
   status_df <- gl$ratings
 }
 
 write.csv(status_df, "/glicko_rating/glicko_rating.csv", row.names = FALSE)
+saveRDS(glicko_rating, "/glicko_rating/glicko_rating.rds")
