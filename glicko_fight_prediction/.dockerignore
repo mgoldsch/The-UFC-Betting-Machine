@@ -7,4 +7,4 @@ LICENSE*
 .vscode
 data/
 glicko_rating/
-fight_predictions/
+fight_prediction/
