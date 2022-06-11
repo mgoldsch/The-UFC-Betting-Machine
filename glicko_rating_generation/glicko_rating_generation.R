@@ -1,5 +1,3 @@
-#! /usr/bin/Rscript
-
 #Glicko Rating Generation
 
 #load glicko library
@@ -11,7 +9,9 @@ library(this.path)
 path <- this.dir()
 
 #load ufc data
-ufc_data <- read.csv(paste0(path, "/test_data.csv"))[, c("fighter_1", "fighter_2", "winner", "date")]
+ufc_fights=list.files("/data/fight_info")
+ufc_fights=ufc_fights[grep(".csv$",ufc_fights)]
+ufc_data <- read.csv(paste0("/data/fight_info/",ufc_fights))[, c("fighter_1", "fighter_2", "winner", "date")]
 
 #data prep
 #drop NC results
@@ -49,4 +49,4 @@ for(j in 1:nrow(ufc_data)){
   status_df <- gl$ratings
 }
 
-write.csv(status_df, paste0(path, "/glicko_rating/glicko_rating.csv"), row.names = FALSE)
+write.csv(status_df, "/glicko_rating/glicko_rating.csv", row.names = FALSE)
