@@ -25,12 +25,12 @@ services:
   #     - scraperLog:/log
   #     - scraperData:/data
   
-  cleaner:
-    build: ./cleaner
-    volumes:
-      - scraperData:/data
+  # cleaner:
+  #   build: ./cleaner
+  #   volumes:
+  #     - scraperData:/data
   
-  glickoRatingGen:
+  glicko_rating_generation:
     build: ./glicko_rating_generation
     volumes:
       - scraperData:/data
