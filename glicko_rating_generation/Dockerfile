@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 
 WORKDIR /app
 
-RUN Rscript -e "install.packages(c('PlayerRatings', 'this.path'))"
+RUN Rscript -e "install.packages('PlayerRatings')"
 
 COPY . .
 

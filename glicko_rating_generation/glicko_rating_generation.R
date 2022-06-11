@@ -2,11 +2,6 @@
 
 #load glicko library
 library(PlayerRatings)
-#path library
-library(this.path)
-
-#get path of csv data
-path <- this.dir()
 
 #load ufc data
 ufc_fights=list.files("/data/fight_info")
