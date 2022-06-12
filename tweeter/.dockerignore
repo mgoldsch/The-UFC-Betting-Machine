@@ -1,0 +1,8 @@
+.git
+.gitignore
+Dockerfile*
+docker-compose*
+README*
+LICENSE*
+.vscode
+fight_prediction/
