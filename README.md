@@ -1,5 +1,6 @@
 # The-UFC-Betting-Machine
 Twitter bot to post predicted winners of UFC fights
+Twitter bot account found here: https://twitter.com/UFCBetMachine
 
 Plan:
   utlizie an existing ufc web scraper to get up to date data on fights
