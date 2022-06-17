@@ -20,7 +20,7 @@ def delete_all_files(path):
 
 def delete_all_but_recent(path):
     files = os.listdir(path)
-    files.sort()
+    files.sort(reverse=True)
     files.pop(0)
     for f in files:
         os.remove(path + "/" + f)
